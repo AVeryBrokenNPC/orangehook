@@ -1,0 +1,237 @@
+games = {1348945266,4924922222,5991163185}
+if table.find(games,game.PlaceId) then
+    if game.PlaceId == games[1] then
+        local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+	Name = "Orangehook",
+	LoadingTitle = "Orangehook",
+	LoadingSubtitle = "by bNPC",
+	ConfigurationSaving = {
+		Enabled = false,
+		FolderName = nil,
+		FileName = ""
+	},
+})
+local GameD = Window:CreateTab("Game Functions")
+local Notice = GameD:CreateParagraph({Title = "Notice", Content = [[As of now, this script is very unfinished. I would definitely recommend using RoxHub as it has actual autofarm.
+also most of this script is a recycle from an old one
+Please. Just use RoxHub: https://discord.gg/MvnyASEdvM]]})
+local Weights = GameD:CreateSection("Strength")
+local OWeights = GameD:CreateButton({
+	Name = "Overhead Weights",
+	Callback = function()
+    local char = game.Players.LocalPlayer.Character
+    local function getRoot(char)
+        local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+        return rootPart
+    end
+    getRoot(char).CFrame = CFrame.new(-95, 4, 63)
+    task.wait(0.35)
+    game:GetService("ReplicatedStorage").Strength_Exercises.Overhead1:FireServer()
+
+
+	end,
+})
+local BWeights = GameD:CreateButton({
+	Name = "Bicep Weights",
+	Callback = function()
+    local char = game.Players.LocalPlayer.Character
+    local function getRoot(char)
+        local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+        return rootPart
+    end
+    getRoot(char).CFrame = CFrame.new(-108, 4, 63)
+    task.wait(0.35)
+    game:GetService("ReplicatedStorage").Strength_Exercises.Bicep1:FireServer()
+
+
+	end,
+})
+local SWeights = GameD:CreateButton({
+	Name = "Squat Weights",
+	Callback = function()
+    local char = game.Players.LocalPlayer.Character
+    local function getRoot(char)
+        local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+        return rootPart
+    end
+    getRoot(char).CFrame = CFrame.new(-120, 4, 62)
+    task.wait(0.35)
+    game:GetService("ReplicatedStorage").Strength_Exercises.Squat1:FireServer()
+
+
+	end,
+})
+local BeWeights = GameD:CreateButton({
+	Name = "Bench Press Weights",
+	Callback = function()
+    local char = game.Players.LocalPlayer.Character
+    local function getRoot(char)
+        local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+        return rootPart
+    end
+    getRoot(char).CFrame = CFrame.new(-129, 4, 61)
+    task.wait(0.35)
+    game:GetService("ReplicatedStorage").Strength_Exercises.Bench1:FireServer()
+
+
+	end,
+})
+    elseif game.PlaceId == games[2] then
+        local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+	Name = "Orangehook",
+	LoadingTitle = "Orangehook",
+	LoadingSubtitle = "by bNPC",
+	ConfigurationSaving = {
+		Enabled = false,
+		FolderName = nil,
+		FileName = ""
+	},
+})
+local GameD = Window:CreateTab("Game Functions")
+local Invis = GameD:CreateButton({
+	Name = "Invisible",
+	Callback = function()
+		player = game.Players.LocalPlayer
+        character = player.Character or player.CharacterAdded:Wait()
+        character.LowerTorso.Root:Destroy()
+        task.wait(0.15)
+        character.UpperTorso.CFrame = CFrame.new(9e9,9e9,9e9)
+	end,
+})
+local Kill = GameD:CreateButton({
+	Name = "Kill with Lawnmower (have someone on lawnmower)",
+	Callback = function()
+		local player = game.Players.LocalPlayer
+        local character = player.Character or player.CharacterAdded:Wait()
+        local SavedPosition = CFrame.zero
+        function getRoot()
+                character = player.Character or player.CharacterAdded:Wait()
+                rootPart = character:FindFirstChild('HumanoidRootPart') or character:FindFirstChild('Torso') or character:FindFirstChild('UpperTorso')
+        return rootPart
+        end
+        SavedPosition = getRoot(char).CFrame
+        getRoot(char).CFrame = CFrame.new(2e9,2e9,2e9)
+        task.wait(0.35)
+        character.Humanoid:UnequipTools()
+        task.wait(1.5)
+        getRoot(char).CFrame = SavedPosition
+        local args = {
+            [1] = "7A7Pick7A7ingTo7A7ols",
+            [2] = "LawnMower"
+        }
+
+        game:GetService("ReplicatedStorage").BB:FindFirstChild("7A7T7A7ool"):InvokeServer(unpack(args))
+        task.wait()
+        game:GetService("ReplicatedStorage").BB:FindFirstChild("7A7T7A7ool"):InvokeServer(unpack(args))
+	end,
+})
+    elseif game.PlaceId == games[3] then
+        local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+	Name = "Orangehook",
+	LoadingTitle = "Orangehook",
+	LoadingSubtitle = "by bNPC",
+	ConfigurationSaving = {
+		Enabled = false,
+		FolderName = nil,
+		FileName = ""
+	},
+})
+local GameD = Window:CreateTab("Game Functions")
+local Remove = GameD:CreateButton({
+	Name = "Remove Invisible Walls",
+	Callback = function()
+		for i,v in pairs(workspace.Map.InvisibleParts:GetChildren()) do
+            v.CanCollide = false
+        end
+	end,
+})
+--[[ local args = {
+    [1] = CFrame.new(Vector3.new(161.49954223632812, 84.09981536865234, 267.0510559082031), Vector3.new(0.9970069527626038, -1.0111886439290174e-07, -0.07731200009584427))
+}
+
+game:GetService("Players").LocalPlayer.Character.SkateboardDeploy.RemoteEvent:FireServer(unpack(args))
+162, 85, 268
+]]
+local Dupe = GameD:CreateButton({
+	Name = "Dupe Skateboard",
+	Callback = function()
+    
+    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+    if v.Name == "SkateboardDeploy" then
+    local args = {
+    [1] = CFrame.new(Vector3.new(161.49954223632812, 84.09981536865234, 267.0510559082031), Vector3.new(0.9970069527626038, -1.0111886439290174e-07, -0.07731200009584427))}
+    v.Parent = game.Players.LocalPlayer.Character
+    v.RemoteEvent:FireServer(unpack(args))
+	task.wait()
+    end
+    end
+    player = game.Players.LocalPlayer
+    character = player.Character or player.CharacterAdded:Wait()
+    function getRoot()
+        character = player.Character or player.CharacterAdded:Wait()
+        rootPart = character:FindFirstChild('HumanoidRootPart') or character:FindFirstChild('Torso') or character:FindFirstChild('UpperTorso')
+        return rootPart
+    end
+    getRoot(char).CFrame = CFrame.new(0, -192, -54)
+    character:Destroy()
+    game.Players.LocalPlayer.CharacterAdded:Wait():WaitForChild("Humanoid")
+    for i,v in pairs(workspace:GetDescendants()) do
+        if v.Name == "Skateboard" and v:IsA("Part") then
+            getRoot(char).CFrame = v.CFrame
+        end
+    end
+    end,
+})
+local AltDupe = GameD:CreateButton({
+	Name = "Alternate Dupe Skateboard",
+	Callback = function()
+    player = game.Players.LocalPlayer
+    character = player.Character or player.CharacterAdded:Wait()
+    function getRoot()
+        character = player.Character or player.CharacterAdded:Wait()
+        rootPart = character:FindFirstChild('HumanoidRootPart') or character:FindFirstChild('Torso') or character:FindFirstChild('UpperTorso')
+        return rootPart
+    end
+    for i,v in pairs(player.Backpack:GetChildren()) do
+    if v.Name == "SkateboardDeploy" then
+    getRoot(char).CFrame = CFrame.new(161.49954223632812, 84.09981536865234, 267.0510559082031)
+    task.wait(0.15)
+    v.Parent = character
+    task.wait(0.01)
+    v.Parent = workspace
+    task.wait()
+    end
+    end
+    local tool = character:FindFirstChild("SkateboardDeploy") or player.Backpack:FindFirstChild("SkateboardDeploy")
+    repeat task.wait() until not tool
+    character:Destroy()
+    game.Players.LocalPlayer.CharacterAdded:Wait():WaitForChild("Humanoid")
+    for i,v in pairs(workspace:GetDescendants()) do
+        if v.Name == "SkateboardDeploy" and v:IsA("Tool") then
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+        end
+    end
+    end,
+})
+    else
+        local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+	Name = "Orangehook",
+	LoadingTitle = "Orangehook",
+	LoadingSubtitle = "by bNPC",
+	ConfigurationSaving = {
+		Enabled = false,
+		FolderName = nil,
+		FileName = ""
+	},
+})
+local GameD = Window:CreateTab("Game Functions")
+local Notice = GameD:CreateParagraph({Title = "No Game Found", Content = [[You are currently not playing a supported game.
+There is a list of games which are supported on the github.
+]]})
+
+    end
+end
