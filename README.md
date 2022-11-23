@@ -14,5 +14,5 @@
 ## Script
 Look good? Great, here's the loadstring.
 ```lua
-loadstring(game:HttpGet("https://gist.githubusercontent.com/AVeryBrokenNPC/2cb189337a5bb82542cadb099b2c2c5d/raw/3ecfdaef97f62741014a5dea01640f27eb10f2fc/orangehook.txt")
+loadstring(game:HttpGet("https://gist.githubusercontent.com/AVeryBrokenNPC/2cb189337a5bb82542cadb099b2c2c5d/raw/465a314ed1aad293ac2be8f7fff415a32815664f/orangehook.txt")
 ```
