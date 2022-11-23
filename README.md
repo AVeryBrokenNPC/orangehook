@@ -9,10 +9,9 @@
 
 >Spray Paint!: 5991163185
 
->RO-BOXING: 1348945266
---ro-boxing is VERY unfinished, look inside the script for details
+>RO-BOXING: 1348945266 --ro-boxing is VERY unfinished, look inside the script for details
 ## Script
 Look good? Great, here's the loadstring.
 ```lua
-loadstring(game:HttpGet("https://gist.githubusercontent.com/AVeryBrokenNPC/2cb189337a5bb82542cadb099b2c2c5d/raw/465a314ed1aad293ac2be8f7fff415a32815664f/orangehook.txt")
+loadstring(game:HttpGet("https://gist.githubusercontent.com/AVeryBrokenNPC/2cb189337a5bb82542cadb099b2c2c5d/raw/465a314ed1aad293ac2be8f7fff415a32815664f/orangehook.txt"))()
 ```
